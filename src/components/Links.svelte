@@ -1,5 +1,5 @@
 <script>
-  export let allLinks;
+  export let allLinks
 </script>
 
 <style>

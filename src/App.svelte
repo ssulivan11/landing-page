@@ -1,7 +1,7 @@
 <script>
-  import Background from "./components/Background.svelte";
-  import Links from "./components/Links.svelte";
-  export let greetings, allLinks, imageUrl;
+  import Background from './components/Background.svelte'
+  import Links from './components/Links.svelte'
+  export let greetings, allLinks, imageUrl
 </script>
 
 <style>
