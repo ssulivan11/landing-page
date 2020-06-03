@@ -4623,6 +4623,13 @@ rollup-plugin-livereload@^1.0.0:
   dependencies:
     livereload "^0.9.1"
 
+rollup-plugin-progress@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-progress/-/rollup-plugin-progress-1.1.2.tgz#5c1dfe7c50f654906bc34d167d5512ee1a4b72d5"
+  integrity sha512-6ehSZOMTZdAlRpe45kf56BnIOsDYC2GKWhGlK/Dh/Ae/AMUneMDyKdiv9ZlRrW/HVc986frTZcc2Zka+oF6W7Q==
+  dependencies:
+    chalk "^2.4.2"
+
 rollup-plugin-svelte@^5.0.3:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/rollup-plugin-svelte/-/rollup-plugin-svelte-5.2.2.tgz#709244243c79ae47394a6943a3d899516d4a610d"
