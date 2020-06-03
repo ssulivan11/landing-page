@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import progress from 'rollup-plugin-progress'
+import bundleSize from 'rollup-plugin-bundle-size'
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -17,6 +18,7 @@ export default {
   },
   plugins: [
     progress(),
+    bundleSize(),
     svelte({
       dev: !production,
       css: (css) => {
