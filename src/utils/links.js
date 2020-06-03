@@ -8,6 +8,16 @@ const allLinks = [
           'https://dev.azure.com/cat-digital/Cat%20Digital/_git/A-DealerUI/pullrequests?_a=mine'
       },
       {
+        name: 'Kronos Board',
+        url:
+          'https://dev.azure.com/cat-digital/Cat%20Digital/_boards/board/t/A%20-%20Athena%20App%20Team%20Kronos/Stories'
+      },
+      {
+        name: 'Current Epic',
+        url:
+          'https://dev.azure.com/cat-digital/Cat%20Digital/_workitems/edit/88647'
+      },
+      {
         name: 'Foresight Docs',
         url:
           'https://catdigital.atlassian.net/wiki/spaces/CD/pages/101384250/Athena+UI+-+Dev+Foresight'
