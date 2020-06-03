@@ -5,6 +5,8 @@
 <style>
   .container {
     margin: 5px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   h2 {
     text-transform: uppercase;
