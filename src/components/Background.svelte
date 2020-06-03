@@ -1,5 +1,5 @@
 <script>
-  export let imageUrl;
+  export let imageUrl
 </script>
 
 <style>

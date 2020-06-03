@@ -8,7 +8,7 @@ const allLinks = [
           'https://dev.azure.com/cat-digital/Cat%20Digital/_git/A-DealerUI/pullrequests?_a=mine'
       },
       {
-        name: 'Foresight Documentation',
+        name: 'Foresight Docs',
         url:
           'https://catdigital.atlassian.net/wiki/spaces/CD/pages/101384250/Athena+UI+-+Dev+Foresight'
       },
@@ -20,17 +20,15 @@ const allLinks = [
     ]
   },
   {
-    title: 'Dev Links',
+    title: 'Other Links',
     links: [
       {
-        name: 'A-DealerUI PRs',
-        url:
-          'https://dev.azure.com/cat-digital/Cat%20Digital/_git/A-DealerUI/pullrequests?_a=mine'
+        name: 'GitHub',
+        url: 'https://github.com/ssulivan11'
       },
       {
-        name: 'Foresight Documentation',
-        url:
-          'https://catdigital.atlassian.net/wiki/spaces/CD/pages/101384250/Athena+UI+-+Dev+Foresight'
+        name: 'Youtube Music',
+        url: 'https://music.youtube.com/'
       }
     ]
   }

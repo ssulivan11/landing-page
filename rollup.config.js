@@ -26,11 +26,8 @@ export default {
       dedupe: ['svelte']
     }),
     commonjs(),
-
     !production && serve(),
-
     !production && livereload('public'),
-
     production && terser()
   ],
   watch: {
@@ -40,12 +37,10 @@ export default {
 
 function serve() {
   let started = false
-
   return {
     writeBundle() {
       if (!started) {
         started = true
-
         require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
           stdio: ['ignore', 'inherit', 'inherit'],
           shell: true
