@@ -37,8 +37,20 @@ const allLinks = [
         url: 'https://github.com/ssulivan11'
       },
       {
-        name: 'Youtube Music',
+        name: 'Music',
         url: 'https://music.youtube.com/'
+      },
+      {
+        name: 'Youtube ',
+        url: 'https://youtube.com/'
+      },
+      {
+        name: 'Reddit ',
+        url: 'https://reddit.com/'
+      },
+      {
+        name: 'Twitter ',
+        url: 'https://twitter.com/'
       }
     ]
   }

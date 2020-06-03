@@ -26,12 +26,14 @@
   form::after {
     content: '';
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    top: 36px;
+    top: 40px;
     right: 15px;
+    background-size: contain;
     background-image: url('https://image.flaticon.com/icons/svg/49/49116.svg');
+    filter: var(--invert);
   }
 </style>
 
