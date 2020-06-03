@@ -7,9 +7,15 @@
     "build": "rollup -c",
     "start": "sirv public",
     "format": "pretty-quick --write .",
-    "lint": "eslint src",
+    "lint": "eslint . --ext .js,.svelte",
     "test": "jest src",
     "test:watch": "jest src --watch --coverage"
+  },
+  "lint-staged": {
+    "*.{js,svelte}": [
+      "yarn lint --fix",
+      "pretty-quick --staged"
+    ]
   },
   "husky": {
     "hooks": {
