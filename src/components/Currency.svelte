@@ -16,7 +16,7 @@
 <style>
   .currency {
     text-align: right;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--bg-color);
     font-size: 0.9em;
     padding: 5px;
     font-weight: bold;

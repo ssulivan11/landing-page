@@ -13,7 +13,6 @@
     margin-bottom: -10px;
   }
   a {
-    color: #111;
     font-weight: 200;
     text-decoration: none;
     font-size: 0.9em;

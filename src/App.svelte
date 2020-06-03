@@ -2,6 +2,8 @@
   import Background from './components/Background.svelte'
   import Links from './components/Links.svelte'
   import Currency from './components/Currency.svelte'
+  import ThemeToggle from './components/ThemeToggle.svelte'
+
   export let greetings, allLinks, imageUrl
 </script>
 
@@ -21,22 +23,29 @@
     border-radius: 5px;
     overflow: hidden;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--bg-color);
   }
 
   h1 {
     font-size: 2em;
     font-weight: 200;
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--bg-color);
     padding: 15px;
-    box-shadow: 0 8px 6px -6px #ccc;
+    display: flex;
+  }
+
+  h1 span {
+    width: 100%;
   }
 </style>
 
 <main>
   <div class="container">
-    <h1>{greetings}!</h1>
+    <h1>
+      <span>{greetings}</span>
+      <ThemeToggle />
+    </h1>
     <Links {allLinks} />
     <Currency />
   </div>
