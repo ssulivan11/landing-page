@@ -4,7 +4,9 @@
   import Currency from './components/Currency.svelte'
   import ThemeToggle from './components/ThemeToggle.svelte'
 
-  export let greetings, allLinks, imageUrl
+  export let greetings = '',
+    allLinks = [],
+    imageUrl = ''
 </script>
 
 <style>
@@ -35,7 +37,7 @@
     display: flex;
   }
 
-  h1 span {
+  h1 .greeting {
     width: 100%;
   }
 </style>
@@ -43,7 +45,7 @@
 <main>
   <div class="container">
     <h1>
-      <span>{greetings}</span>
+      <span class="greeting">{greetings}</span>
       <ThemeToggle />
     </h1>
     <Links {allLinks} />

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Currency with mock fetch 1`] = `
+<div
+  class="currency"
+>
+  🇬🇧 🇺🇸 $
+  1.200
+</div>
+`;

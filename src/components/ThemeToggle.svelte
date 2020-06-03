@@ -10,8 +10,8 @@
       if (currentTheme === 'dark') toggleSwitch.checked = true
     }
 
-    const switchTheme = (e) => {
-      if (e.target.checked) {
+    const switchTheme = (event) => {
+      if (event.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark')
         return localStorage.setItem('theme', 'dark')
       }
