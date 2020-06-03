@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Scott Sullivan's Landing Page",
+  "description": "Just my custom landing page for new tab and home",
+  "version": "1.0.0",
+  "icons": {
+    "16": "favicon.png",
+    "32": "favicon.png",
+    "48": "favicon.png",
+    "128": "favicon.png"
+  },
+  "author": "Scott [ssulivan11@gmail.com]",
+  "minimum_chrome_version": "45.0",
+  "offline_enabled": false,
+  "chrome_url_overrides": {
+    "newtab": "landingpage.html"
+  },
+  "permissions": ["management"],
+  "short_name": "LandingPage"
+}

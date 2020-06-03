@@ -3,6 +3,7 @@
   import Links from './components/Links.svelte'
   import Currency from './components/Currency.svelte'
   import ThemeToggle from './components/ThemeToggle.svelte'
+  import Search from './components/Search.svelte'
 
   export let greetings = '',
     allLinks = [],
@@ -19,6 +20,7 @@
     height: 100vh;
     width: 100vw;
     z-index: 1;
+    flex-direction: column-reverse;
   }
 
   .container {
@@ -43,6 +45,7 @@
 </style>
 
 <main>
+  <Search />
   <div class="container">
     <h1>
       <span class="greeting">{greetings}</span>
