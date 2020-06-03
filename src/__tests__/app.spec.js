@@ -1,8 +1,11 @@
 //index.spec.js
 import { render } from '@testing-library/svelte'
+import promiseCurrencyMock from '../__mocks__/promise.mock'
 import App from '../App.svelte'
 
 test('should render App with props', () => {
+  global.fetch = jest.fn()
+  promiseCurrencyMock(0)
   const mockGreeting = 'Hello!'
   const allLinks = [
     {
