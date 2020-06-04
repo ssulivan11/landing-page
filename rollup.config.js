@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
+import json from 'rollup-plugin-json'
 import progress from 'rollup-plugin-progress'
 import bundleSize from 'rollup-plugin-bundle-size'
 
@@ -30,6 +31,10 @@ export default {
       dedupe: ['svelte']
     }),
     commonjs(),
+    json({
+      exclude: ['node_modules'],
+      compact: true
+    }),
     !production && serve(),
     !production && livereload('public'),
     production && terser()

@@ -1,7 +1,7 @@
 import App from './App.svelte'
 import randomImageUrl from './utils/random'
-import allLinks from './utils/links'
 import greetings from './utils/greetings'
+import allLinks from '../links.json'
 
 const app = new App({
   target: document.body,

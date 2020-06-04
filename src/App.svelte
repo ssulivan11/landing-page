@@ -12,7 +12,6 @@
 
 <style>
   main {
-    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
@@ -25,9 +24,9 @@
 
   .container {
     border-radius: 5px;
-    overflow: hidden;
     width: 400px;
     background-color: var(--bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   }
 
   h1 {

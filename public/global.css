@@ -1,14 +1,14 @@
 :root {
   --primary-color: #111;
   --font-color: #111;
-  --bg-color: rgba(255, 255, 255, 0.75);
+  --bg-color: rgba(255, 255, 255, 0.8);
   --invert: invert(0);
 }
 
 [data-theme='dark'] {
   --primary-color: #fff;
   --font-color: #fff;
-  --bg-color: rgba(0, 0, 0, 0.65);
+  --bg-color: rgba(0, 0, 0, 0.8);
   --invert: invert(1);
 }
 
