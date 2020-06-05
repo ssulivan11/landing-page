@@ -12,15 +12,22 @@
   }
 
   input {
+    transition: 0.25s width ease-out;
+    width: 12px;
     background-color: var(--bg-color);
     color: var(--primary);
-    min-width: 350px;
     padding: 15px 20px;
     outline: none;
     border-radius: 30px;
     font-size: 1.25em;
     border: none;
     margin-top: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  input:focus {
+    width: 350px;
+    padding: 15px 20px;
   }
 
   form::after {
@@ -32,6 +39,7 @@
     top: 40px;
     right: 15px;
     background-size: contain;
+    opacity: 0.75;
     background-image: url('https://image.flaticon.com/icons/svg/49/49116.svg');
     filter: var(--invert);
   }

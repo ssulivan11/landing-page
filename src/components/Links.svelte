@@ -9,18 +9,25 @@
     grid-template-columns: 1fr 1fr;
   }
   h2 {
-    text-transform: uppercase;
-    font-size: 0.75em;
+    font-size: 1em;
     font-weight: 200;
     margin-bottom: -10px;
   }
   a {
     font-weight: 200;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 0.75em;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    padding: 0;
   }
   li {
-    list-style-type: circle;
+    list-style-type: none;
   }
 </style>
 
@@ -32,7 +39,7 @@
         {#each group.links as link}
           <li class="link-button">
             <a target="_blank" href={link.url}>
-              <span>{link.name}</span>
+              <span>- {link.name}</span>
             </a>
           </li>
         {/each}

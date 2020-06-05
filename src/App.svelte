@@ -26,10 +26,11 @@
     border-radius: 5px;
     width: 400px;
     background-color: var(--bg-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   h1 {
+    border-radius: 5px 5px 0 0;
     font-size: 2em;
     font-weight: 200;
     margin: 0;
@@ -50,7 +51,9 @@
       <span class="greeting">{greetings}</span>
       <ThemeToggle />
     </h1>
-    <Links {allLinks} />
+    {#if allLinks.length}
+      <Links {allLinks} />
+    {/if}
     <Currency />
   </div>
 </main>

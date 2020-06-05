@@ -21,6 +21,7 @@
     padding: 5px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    border-radius: 0 0 5px 5px;
   }
 </style>
 
