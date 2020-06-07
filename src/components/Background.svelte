@@ -1,5 +1,10 @@
 <script>
-  export let imageUrl
+  import { onDestroy } from 'svelte'
+  import { imageUrl } from '../utils/random'
+
+  let newImageUrl = imageUrl()
+  const interval = setInterval(() => (newImageUrl = imageUrl()), 5000)
+  onDestroy(() => clearInterval(interval))
 </script>
 
 <style>
@@ -13,7 +18,8 @@
     left: 0;
     position: absolute;
     z-index: 0;
+    transition: background-image 1s linear;
   }
 </style>
 
-<div class="background" style="--image-url: url({imageUrl})" />
+<div class="background" style="--image-url: url({newImageUrl})" />

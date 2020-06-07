@@ -1,3 +1,67 @@
+const morningText = [
+  { translate: 'Goeie more', lang: 'afrikaans' },
+  { translate: 'Good morning', lang: 'english' },
+  { translate: 'Bonjour', lang: 'french' },
+  { translate: 'Guten Morgen', lang: 'german' },
+  { translate: 'Aloha kakahiaka', lang: 'hawaiian' },
+  { translate: 'Jó reggelt kívánok', lang: 'hungarian' },
+  { translate: 'Maidin mhaith', lang: 'irish' },
+  { translate: 'Buongiorno', lang: 'italian' },
+  { translate: 'Bonum man', lang: 'latin' },
+  { translate: 'Dzień dobry', lang: 'polish' },
+  { translate: 'Buenos días', lang: 'spanish' },
+  { translate: 'Habari za asubuhi', lang: 'swahili' },
+  { translate: 'Günaydın', lang: 'turkish' },
+  { translate: 'Sawubona', lang: 'zulu' }
+]
+const afternoonText = [
+  { translate: 'Goeie middag', lang: 'afrikaans' },
+  { translate: 'Good afternoon', lang: 'english' },
+  { translate: 'Bonne après-midi', lang: 'french' },
+  { translate: 'Guten Tag', lang: 'german' },
+  { translate: 'Aloha awakea, Aloha Auinalā', lang: 'hawaiian' },
+  { translate: 'Jó napot', lang: 'hungarian' },
+  { translate: 'Tráthnóna maith', lang: 'irish' },
+  { translate: 'Buon pomeriggio', lang: 'italian' },
+  { translate: 'Bona dies', lang: 'latin' },
+  { translate: 'Dzień dobry', lang: 'polish' },
+  { translate: 'Buenas tardes', lang: 'spanish' },
+  { translate: 'Mchana mzuri', lang: 'swahili' },
+  { translate: 'Tünaydın', lang: 'turkish' },
+  { translate: 'Sawubona', lang: 'zulu' }
+]
+const eveningText = [
+  { translate: 'Goeienaand', lang: 'afrikaans' },
+  { translate: 'Good evening', lang: 'english' },
+  { translate: 'Bonsoir', lang: 'french' },
+  { translate: 'Guten Abend', lang: 'german' },
+  { translate: 'Aloha ahiahi', lang: 'hawaiian' },
+  { translate: 'Jó estét', lang: 'hungarian' },
+  { translate: 'Tráthnóna maith', lang: 'irish' },
+  { translate: 'Buonasera', lang: 'italian' },
+  { translate: 'Bonum vesperam', lang: 'latin' },
+  { translate: 'Dobry wieczór', lang: 'polish' },
+  { translate: 'Buena noches', lang: 'spanish' },
+  { translate: 'Habari za jioni', lang: 'swahili' },
+  { translate: 'İyi akşamlar', lang: 'turkish' },
+  { translate: 'Sawubona', lang: 'zulu' }
+]
+const nightText = [
+  { translate: 'Goeie nag', lang: 'afrikaans' },
+  { translate: 'Good nigh', lang: 'english' },
+  { translate: 'Bonne nuit', lang: 'french' },
+  { translate: 'Gute Nacht', lang: 'german' },
+  { translate: 'Aloha pō', lang: 'hawaiian' },
+  { translate: 'Jó éjszakát', lang: 'hungarian' },
+  { translate: 'Oíche mhaith', lang: 'irish' },
+  { translate: 'Buona notte', lang: 'italian' },
+  { translate: 'bonum nocte', lang: 'latin' },
+  { translate: 'Dobranoc', lang: 'polish' },
+  { translate: 'Buenas noches', lang: 'spanish' },
+  { translate: 'Usiku mwema', lang: 'swahili' },
+  { translate: 'İyi geceler', lang: 'turkish' },
+  { translate: 'Ulale kahle', lang: 'zulu' }
+]
 const imageUrls = [
   'https://www.gstatic.com/prettyearth/assets/full/1003.jpg',
   'https://www.gstatic.com/prettyearth/assets/full/1004.jpg',
@@ -1525,7 +1589,18 @@ const imageUrls = [
   'https://www.gstatic.com/prettyearth/assets/full/7023.jpg'
 ]
 
-const randomImageUrl = () =>
-  imageUrls[Math.floor(Math.random() * imageUrls.length)]
+const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)]
 
-export default randomImageUrl
+const greeting = () => {
+  const hour = new Date().getHours()
+  if (hour < 11) return { time: 'good morning', text: getRandom(morningText) }
+  if (hour >= 11 && hour <= 16)
+    return { time: 'good afternoon', text: getRandom(afternoonText) }
+  if (hour >= 16 && hour <= 20)
+    return { time: 'good evening', text: getRandom(eveningText) }
+  return { time: 'good night', text: getRandom(nightText) }
+}
+
+const imageUrl = () => getRandom(imageUrls)
+
+export { greeting, imageUrl }

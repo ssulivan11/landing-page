@@ -5,9 +5,8 @@
   import ThemeToggle from './components/ThemeToggle.svelte'
   import Search from './components/Search.svelte'
 
-  export let greetings = '',
-    allLinks = [],
-    imageUrl = ''
+  export let greeting = {},
+    allLinks = []
 </script>
 
 <style>
@@ -37,10 +36,25 @@
     background-color: var(--bg-color);
     padding: 15px;
     display: flex;
+    position: relative;
   }
 
   h1 .greeting {
     width: 100%;
+  }
+
+  h1 small {
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0;
+    font-size: 0.25em;
+    text-transform: uppercase;
+  }
+
+  h1:hover small {
+    opacity: 1;
   }
 </style>
 
@@ -48,7 +62,10 @@
   <Search />
   <div class="container">
     <h1>
-      <span class="greeting">{greetings}</span>
+      <span class="greeting">
+        {greeting.text.translate}
+        <small>{greeting.time} - {greeting.text.lang}</small>
+      </span>
       <ThemeToggle />
     </h1>
     {#if allLinks.length}
@@ -58,4 +75,4 @@
   </div>
 </main>
 
-<Background {imageUrl} />
+<Background />

@@ -50,6 +50,7 @@
   "dependencies": {
     "eslint": "^7.1.0",
     "eslint-plugin-svelte3": "^2.7.3",
-    "sirv-cli": "^0.4.4"
+    "sirv-cli": "^0.4.4",
+    "svelte-image": "^0.2.3"
   }
 }

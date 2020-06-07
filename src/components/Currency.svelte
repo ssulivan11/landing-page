@@ -25,4 +25,6 @@
   }
 </style>
 
-<div class="currency">🇬🇧 🇺🇸 ${poundToDollar}</div>
+{#if poundToDollar}
+  <div class="currency">🇬🇧 🇺🇸 ${poundToDollar}</div>
+{/if}
