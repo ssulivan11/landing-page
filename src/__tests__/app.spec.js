@@ -1,4 +1,3 @@
-//index.spec.js
 import { render } from '@testing-library/svelte'
 import promiseCurrencyMock from '../__mocks__/promise.mock'
 import App from '../App.svelte'
@@ -6,7 +5,10 @@ import App from '../App.svelte'
 test('should render App with props', () => {
   global.fetch = jest.fn()
   promiseCurrencyMock(0)
-  const mockGreeting = 'Hello!'
+  const mockGreeting = {
+    time: 'morning',
+    text: { translate: 'Hello!', language: 'english' }
+  }
   const allLinks = [
     {
       title: 'title',
@@ -21,14 +23,14 @@ test('should render App with props', () => {
 
   const { container, getByText } = render(App, {
     props: {
-      greetings: mockGreeting,
-      imageUrl: 'mockImageUrl.png',
+      greeting: mockGreeting,
       allLinks
     }
   })
 
-  expect(getByText(mockGreeting)).toBeInTheDocument()
-  expect(container.querySelector('.background').style._values).toEqual({
-    '--image-url': 'url(mockImageUrl.png)'
-  })
+  expect(getByText(mockGreeting.text.translate)).toBeInTheDocument()
+
+  expect(
+    container.querySelector('.background').style._values['--image-url']
+  ).toMatch(/images\/earth/)
 })

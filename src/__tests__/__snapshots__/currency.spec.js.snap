@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render Currency with mock fetch 1`] = `
-<div
+<a
   class="currency"
+  href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=GBP&To=USD"
+  target="_blank"
 >
   🇬🇧 🇺🇸 $
   1.200
-</div>
+</a>
 `;

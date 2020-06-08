@@ -1,10 +1,9 @@
 <script>
   import { onDestroy } from 'svelte'
-  import { imageUrl } from '../utils/random'
+  import { imageName } from '../utils/random'
 
-  console.warn(imageUrl())
-  let newImageUrl = imageUrl()
-  const interval = setInterval(() => (newImageUrl = imageUrl()), 20000)
+  let imageNamePath = imageName()
+  const interval = setInterval(() => (imageNamePath = imageName()), 20000)
   onDestroy(() => clearInterval(interval))
 </script>
 
@@ -23,4 +22,6 @@
   }
 </style>
 
-<div class="background" style="--image-url: url(../{newImageUrl})" />
+<div
+  class="background"
+  style="--image-url: url(../images/earth/{imageNamePath})" />

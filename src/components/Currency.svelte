@@ -22,9 +22,19 @@
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 0 0 5px 5px;
+    display: block;
+    text-decoration: none;
+  }
+  .currency:hover {
+    text-decoration: underline;
   }
 </style>
 
 {#if poundToDollar}
-  <div class="currency">🇬🇧 🇺🇸 ${poundToDollar}</div>
+  <a
+    class="currency"
+    href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=GBP&To=USD"
+    target="_blank">
+    🇬🇧 🇺🇸 ${poundToDollar}
+  </a>
 {/if}
