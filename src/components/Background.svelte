@@ -18,10 +18,22 @@
     left: 0;
     position: absolute;
     z-index: 0;
-    transition: background-image 2.5s ease-in-out;
+    transition: background-image 2s ease-in-out;
+    filter: blur(0.5px);
+  }
+
+  button {
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    background: none;
+    border: none;
+    position: fixed;
   }
 </style>
 
 <div
   class="background"
   style="--image-url: url(../images/earth/{imageNamePath})" />
+
+<button on:click={() => (imageNamePath = imageName())}>🔄</button>

@@ -5,8 +5,6 @@
 <style>
   .container {
     margin: 5px 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
   h2 {
     font-size: 1em;
@@ -17,6 +15,30 @@
     font-weight: 200;
     text-decoration: none;
     font-size: 0.75em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  i {
+    background-color: var(--bg-color);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 5px;
+    padding: 5px;
+    border-radius: 100%;
+  }
+
+  i.letter {
+    text-decoration: none;
+    font-style: unset;
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   a:hover {
@@ -25,6 +47,8 @@
 
   ul {
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   li {
     list-style-type: none;
@@ -39,7 +63,12 @@
         {#each group.links as link}
           <li class="link-button">
             <a target="_blank" href={link.url}>
-              <span>- {link.name}</span>
+              {#if link.icon}
+                <i class="material-icons">{link.icon}</i>
+              {:else}
+                <i class="letter">{link.name.charAt(0)}</i>
+              {/if}
+              <span>{link.name}</span>
             </a>
           </li>
         {/each}
