@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       path: 'public/build/bundle.css',
-      maxSize: '1.1kB',
+      maxSize: '1.2kB',
       compression: 'gzip'
     }
   ]
