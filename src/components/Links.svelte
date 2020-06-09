@@ -20,7 +20,6 @@
     align-items: center;
     text-align: center;
   }
-
   i {
     background-color: var(--bg-color);
     width: 25px;
@@ -39,10 +38,6 @@
     font-weight: bold;
     font-size: 1.25em;
     font-family: 'Courier New', Courier, monospace;
-  }
-
-  a:hover {
-    text-decoration: underline;
   }
 
   ul {
