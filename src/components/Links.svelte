@@ -7,9 +7,12 @@
     margin: 5px 15px;
   }
   h2 {
+    display: none;
     font-size: 1em;
     font-weight: 200;
     margin-bottom: -10px;
+    text-transform: uppercase;
+    text-align: left;
   }
   a {
     font-weight: 200;
@@ -40,6 +43,10 @@
     font-family: 'Courier New', Courier, monospace;
   }
 
+  a:hover i {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+  }
   ul {
     padding: 0;
     display: grid;
