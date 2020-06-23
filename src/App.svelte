@@ -4,6 +4,7 @@
   import Currency from './components/Currency.svelte'
   import ThemeToggle from './components/ThemeToggle.svelte'
   import Search from './components/Search.svelte'
+  import Weather from './components/Weather.svelte'
 
   export let greeting = {},
     allLinks = []
@@ -28,10 +29,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
-  h1 {
+  header {
     border-radius: 5px 5px 0 0;
-    font-size: 2em;
-    font-weight: 200;
     margin: 0;
     background-color: var(--bg-color);
     padding: 15px;
@@ -39,38 +38,48 @@
     position: relative;
   }
 
-  h1 .greeting {
-    width: 100%;
+  h1 {
+    font-size: 2em;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
   }
 
-  h1 small {
+  .greeting {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .greeting:hover small {
+    opacity: 1;
+  }
+
+  small {
     position: absolute;
-    left: 15px;
+    left: 50px;
     bottom: 5px;
     transition: opacity 0.25s ease-in-out;
     opacity: 0;
-    font-size: 0.25em;
+    font-size: 0.5em;
     text-transform: uppercase;
-  }
-
-  h1:hover small {
-    opacity: 1;
   }
 </style>
 
 <main>
-  <Search />
   <div class="container">
-    <h1>
+    <header>
       <span class="greeting">
-        {greeting.text.translate}
+        <Weather />
+        <h1>{greeting.text.translate}</h1>
         <small>{greeting.time} - {greeting.text.lang}</small>
       </span>
       <ThemeToggle />
-    </h1>
+    </header>
     {#if allLinks.length}
       <Links {allLinks} />
     {/if}
+    <Search />
     <Currency />
   </div>
 </main>

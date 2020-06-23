@@ -6426,6 +6426,11 @@ svelte-image@^0.2.3:
     svelte-waypoint latest
     svgo "^1.2.2"
 
+svelte-popover@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/svelte-popover/-/svelte-popover-2.0.8.tgz#38e9e8c065e779612c84ef0e992e13c15740fe42"
+  integrity sha512-Yvz4FpvvXc5aBGyIE/TlGlqULLKkcfc7N0MoaqNXHMRVXxla+sc7G1xSCCURP3VqP0nZ5cIyPWOLLWFXuJjTRA==
+
 svelte-waypoint@latest:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/svelte-waypoint/-/svelte-waypoint-0.1.4.tgz#ab467bed08c5f38716709872cf53d3f9da17831b"

@@ -3,7 +3,7 @@
   import { imageName } from '../utils/random'
 
   let imageNamePath = imageName()
-  const interval = setInterval(() => (imageNamePath = imageName()), 15000)
+  const interval = setInterval(() => (imageNamePath = imageName()), 7500)
   onDestroy(() => clearInterval(interval))
 </script>
 
@@ -18,9 +18,9 @@
     left: 0;
     position: absolute;
     z-index: 0;
-    transition: background-image 2s ease-in-out;
+    transition: background-image 2s;
     background-position: center center;
-    animation: pulse 30s infinite ease-in-out;
+    animation: pulse 30s infinite;
   }
 
   @keyframes pulse {
@@ -29,7 +29,7 @@
       transform: translate(-20px, -20px) scale(1);
     }
     50% {
-      transform: translate(-60px, -60px) scale(0.95);
+      transform: translate(-75px, -75px) scale(0.95);
     }
   }
 

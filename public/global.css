@@ -60,3 +60,7 @@ a {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 }
+
+.arrow {
+  display: none;
+}

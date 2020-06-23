@@ -45,7 +45,8 @@
     "rollup-plugin-progress": "^1.1.2",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^6.1.0",
-    "svelte": "^3.23.0"
+    "svelte": "^3.23.0",
+    "svelte-popover": "^2.0.8"
   },
   "dependencies": {
     "eslint": "^7.1.0",
