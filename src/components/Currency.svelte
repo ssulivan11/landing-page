@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  import customJson from '../../custom.json'
+  const customJson = require('../../custom.json')
 
   let dollarConversion
   if (customJson.currency) {
