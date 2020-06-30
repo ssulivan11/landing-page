@@ -1,28 +1,32 @@
 <script>
   import { onMount } from 'svelte'
   import Popover from 'svelte-popover'
+  import customJson from '../../custom.json'
 
   let weatherData
   let weatherIcon
-  onMount(async () => {
-    const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?zip=60642&units=imperial&appid=c75e4a20e1b09cb5e3221c35295c5569`
-    )
-    weatherData = await res.json()
-    switch (weatherData.weather[0].main) {
-      case 'Rain':
-        weatherIcon = 'grain'
-        break
-      case 'Clear':
-        weatherIcon = 'wb_sunny'
-        break
-      case 'Clouds':
-        weatherIcon = 'wb_cloudy'
-        break
-      default:
-        weatherIcon = 'wb_cloudy'
-    }
-  })
+
+  if (customJson.zipCode) {
+    onMount(async () => {
+      const res = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?zip=${customJson.zipCode}&units=imperial&appid=c75e4a20e1b09cb5e3221c35295c5569`
+      )
+      weatherData = await res.json()
+      switch (weatherData.weather[0].main) {
+        case 'Rain':
+          weatherIcon = 'grain'
+          break
+        case 'Clear':
+          weatherIcon = 'wb_sunny'
+          break
+        case 'Clouds':
+          weatherIcon = 'wb_cloudy'
+          break
+        default:
+          weatherIcon = 'wb_cloudy'
+      }
+    })
+  }
 </script>
 
 <style>

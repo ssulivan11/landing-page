@@ -4,4 +4,4 @@ public/images/earth
 .DS_Store
 .vscode
 coverage
-links.json
+custom.json
