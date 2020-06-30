@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte'
-  const customJson = require('../../custom.json')
+  import * as customJson from '../../custom.json'
 
   let dollarConversion
   if (customJson.currency) {
@@ -41,7 +41,7 @@
 {#if dollarConversion}
   <a
     class="currency"
-    href={`https://www.xe.com/currencyconverter/convert/?Amount=1&From=${customJson.currencyConversion}&To=USD`}
+    href={`https://www.xe.com/currencyconverter/convert/?Amount=1&From=${customJson.currency.convertFrom}&To=USD`}
     target="_blank">
     {customJson.currency.convertFrom} ${dollarConversion}
   </a>

@@ -1,4 +1,5 @@
-import customJson from '../../custom.json'
+import * as customJson from '../../custom.json'
+
 const {
   morningText,
   afternoonText,

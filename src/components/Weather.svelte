@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import Popover from 'svelte-popover'
-  const customJson = require('../../custom.json')
+  import * as customJson from '../../custom.json'
 
   let weatherData
   let weatherIcon
