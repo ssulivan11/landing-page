@@ -40,6 +40,7 @@
     background: none;
     border: none;
     position: fixed;
+    opacity: 0.75;
   }
 </style>
 

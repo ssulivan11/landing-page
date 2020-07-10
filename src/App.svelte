@@ -6,6 +6,8 @@
   import Search from './components/Search.svelte'
   import Weather from './components/Weather.svelte'
 
+  let isHiddenContainer = false
+
   export let greeting = {},
     allLinks = []
 </script>
@@ -20,8 +22,13 @@
     width: 100vw;
     z-index: 1;
     flex-direction: column-reverse;
+    opacity: 1;
+    transition: opacity 1s ease;
   }
 
+  main.isHiddenContainer {
+    opacity: 0;
+  }
   .container {
     border-radius: 5px;
     width: 400px;
@@ -64,9 +71,34 @@
     font-size: 0.5em;
     text-transform: uppercase;
   }
+
+  button.hide-button {
+    left: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    position: fixed;
+    z-index: 3;
+    border: 0;
+  }
+
+  .curtain.isHiddenContainer {
+    transition: opacity 1s ease;
+    opacity: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .curtain.isHiddenContainer {
+    opacity: 1;
+  }
 </style>
 
-<main>
+<main class:isHiddenContainer>
   <div class="container">
     <header>
       <span class="greeting">
@@ -82,6 +114,11 @@
     <Search />
     <Currency />
   </div>
+  <button class="hide-button" on:click={() => (isHiddenContainer = true)}>
+    ✖️
+  </button>
 </main>
+
+<div class="curtain" class:isHiddenContainer />
 
 <Background />
