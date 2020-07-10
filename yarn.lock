@@ -2023,10 +2023,10 @@ buffer@^5.2.0, buffer@^5.5.0:
     base64-js "^1.0.2"
     ieee754 "^1.1.4"
 
-buildsize-cli@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/buildsize-cli/-/buildsize-cli-1.0.5.tgz#3c522ddbaf52e72f4079f5ed2b54d70425c3f963"
-  integrity sha512-XyL0mORIA1G3LUca6X5no2ZVmCfiw8mQtFmD+VuQTlGyuBg9FoRSkVSMh7scBzEbP70PyK4rLQWfzi9DMTy3LA==
+buildsize-cli@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/buildsize-cli/-/buildsize-cli-1.0.6.tgz#8f0653a2c0ca9d359f04e4c335ec386d8147f546"
+  integrity sha512-AKOO9OKev7EzrPdWqFt7URyRdLXB4TlpB+I8AVdVUw0Bt786K3BdJycMuDBuFiJy8R2prFXVsr1QkaoMM0J5ug==
   dependencies:
     brotli-size "^4.0.0"
     bytes "^3.1.0"
