@@ -13,13 +13,13 @@
   },
   "lint-staged": {
     "*.{js,svelte}": [
-      "yarn lint --fix"
+      "npm run lint --fix"
     ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && pretty-quick --staged",
-      "pre-push": "yarn test && yarn build"
+      "pre-push": "npm run test && npm run build"
     }
   },
   "devDependencies": {

@@ -3,8 +3,8 @@
 ## Get Started
 
 ```bash
-yarn
-yarn dev
+npm i
+npm run dev
 ```
 
 ## Adding Links
