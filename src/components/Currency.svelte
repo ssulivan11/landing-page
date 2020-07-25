@@ -23,14 +23,6 @@
 
 <style>
   .currency {
-    text-align: right;
-    background-color: var(--bg-color);
-    font-size: 0.9em;
-    padding: 5px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 0 0 5px 5px;
-    display: block;
     text-decoration: none;
   }
   .currency:hover {

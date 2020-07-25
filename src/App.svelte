@@ -2,6 +2,7 @@
   import Background from './components/Background.svelte'
   import Links from './components/Links.svelte'
   import Currency from './components/Currency.svelte'
+  import DateTime from './components/DateTime.svelte'
   import ThemeToggle from './components/ThemeToggle.svelte'
   import Search from './components/Search.svelte'
   import Weather from './components/Weather.svelte'
@@ -72,6 +73,16 @@
     text-transform: uppercase;
   }
 
+  footer {
+    background-color: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 0 5px 5px;
+    display: flex;
+    font-size: 0.75em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
   button.hide-button {
     left: 0;
     bottom: 0;
@@ -112,7 +123,10 @@
       <Links {allLinks} />
     {/if}
     <Search />
-    <Currency />
+    <footer>
+      <DateTime />
+      <Currency />
+    </footer>
   </div>
   <button class="hide-button" on:click={() => (isHiddenContainer = true)}>
     ✖️
