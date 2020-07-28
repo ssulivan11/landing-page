@@ -44,8 +44,10 @@
   }
 
   a:hover i {
+    transition: all 0.2s ease-in;
     background-color: var(--secondary-color);
     color: var(--bg-color);
+    transform: scale(1.15);
   }
   ul {
     padding: 0;
