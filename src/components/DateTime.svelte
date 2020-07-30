@@ -16,7 +16,9 @@
   onMount(() => {
     const interval = setInterval(() => {
       time = new Date()
-      timeString = `${hours}:${minutes}:${seconds}`
+      timeString = `${hours}:${minutes > 10 ? '' : '0'}${minutes}:${
+        seconds > 10 ? '' : '0'
+      }${seconds}`
     }, 1000)
 
     return () => {
@@ -39,7 +41,5 @@
 
 <div class="date-time">
   <span class="date">{dateString}</span>
-  {#if timeString}
-    <span class="time">{timeString}</span>
-  {/if}
+  <span class="time">{timeString || '--:--:--'}</span>
 </div>
