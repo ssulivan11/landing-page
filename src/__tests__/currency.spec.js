@@ -11,8 +11,8 @@ test('should render Currency with mock fetch', async () => {
   expect(container.querySelector('.currency')).toMatchSnapshot()
 })
 
-test('should alert when currency exchange is over $1.300', async () => {
-  promiseCurrencyMock(1.31)
+test('should alert when currency exchange is over $1.5', async () => {
+  promiseCurrencyMock(1.5)
   global.alert = jest.fn()
   render(Currency)
   await tick()
