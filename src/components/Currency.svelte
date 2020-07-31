@@ -8,6 +8,7 @@
       const res = await fetch(
         `https://api.exchangeratesapi.io/latest?base=${customJson.currency.convertFrom}`
       )
+
       dollarConversion = await res.json()
       dollarConversion = dollarConversion.rates.USD.toFixed(3)
 
@@ -15,7 +16,9 @@
         customJson.currency.alertAt &&
         dollarConversion > customJson.currency.alertAt
       ) {
-        alert('The Sterling Pound is over $1.30 conversion!')
+        alert(
+          `The ${customJson.currency.convertFrom} is over $${customJson.currency.alertAt} conversion!`
+        )
       }
     })
   }
