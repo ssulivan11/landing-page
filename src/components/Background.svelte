@@ -44,8 +44,6 @@
   }
 </style>
 
-<div
-  class="background"
-  style="--image-url: url(../images/earth/{imageNamePath})" />
+<div class="background" style="--image-url: url(../images/{imageNamePath})" />
 
 <button on:click={() => (imageNamePath = imageName())}>🔄</button>

@@ -1,6 +1,7 @@
 node_modules
 public/build
-public/images/earth
+public/images/*/
+public/.DS_Store
 .DS_Store
 .vscode
 coverage
