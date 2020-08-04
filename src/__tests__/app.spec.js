@@ -7,7 +7,7 @@ test('should render App with props', () => {
   promiseCurrencyMock(0)
   const mockGreeting = {
     time: 'morning',
-    text: { translate: 'Hello!', language: 'english' }
+    text: { translate: 'Hello!', language: 'english' },
   }
   const allLinks = [
     {
@@ -15,22 +15,22 @@ test('should render App with props', () => {
       links: [
         {
           name: 'name',
-          url: 'url'
-        }
-      ]
-    }
+          url: 'url',
+        },
+      ],
+    },
   ]
 
   const { container, getByText } = render(App, {
     props: {
       greeting: mockGreeting,
-      allLinks
-    }
+      allLinks,
+    },
   })
 
   expect(getByText(mockGreeting.text.translate)).toBeInTheDocument()
 
   expect(
     container.querySelector('.background').style._values['--image-url']
-  ).toMatch(/images\/earth/)
+  ).toMatch(/images/)
 })
