@@ -36,8 +36,7 @@
 {#if dollarConversion}
   <a
     class="currency"
-    href={`https://www.xe.com/currencyconverter/convert/?Amount=1&From=${customJson.currency.convertFrom}&To=USD`}
-    target="_blank">
+    href={`https://www.xe.com/currencyconverter/convert/?Amount=1&From=${customJson.currency.convertFrom}&To=USD`}>
     {customJson.currency.convertFrom} ${dollarConversion}
   </a>
 {/if}

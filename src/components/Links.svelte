@@ -66,7 +66,7 @@
       <ul>
         {#each group.links as link}
           <li class="link-button">
-            <a target="_blank" href={link.url}>
+            <a href={link.url}>
               {#if link.icon}
                 <i class="material-icons">{link.icon}</i>
               {:else}
