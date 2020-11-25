@@ -2,6 +2,7 @@
   import Background from './components/Background.svelte'
   import Links from './components/Links.svelte'
   import Currency from './components/Currency.svelte'
+  import Offline from './components/Offline.svelte'
   import DateTime from './components/DateTime.svelte'
   import ThemeToggle from './components/ThemeToggle.svelte'
   import Search from './components/Search.svelte'
@@ -111,6 +112,7 @@
 
 <main class:isHiddenContainer>
   <div class="container">
+    <Offline />
     <header>
       <span class="greeting">
         <Weather />
