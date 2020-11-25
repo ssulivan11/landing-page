@@ -3,8 +3,11 @@
   let isOnline = true
 
   const interval = setInterval(() => {
-    if (navigator.onLine) return clearInterval(interval)
-    return (onlineStatus = false)
+    if (!!navigator && navigator.onLine) {
+      if (!isOnline) return location.reload()
+      return clearInterval(interval)
+    }
+    return (isOnline = false)
   }, 500)
   onDestroy(() => clearInterval(interval))
 </script>
@@ -12,7 +15,7 @@
 <style>
   .offline {
     padding: 15px;
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 1px dashed var(--primary-color);
   }
 
   .offline__message:after {
@@ -33,6 +36,6 @@
 
 {#if !isOnline}
   <div class="offline">
-    <span class="offline__message">Connecting</span>
+    <span class="offline__message">Still Connecting</span>
   </div>
 {/if}
