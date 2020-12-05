@@ -1,9 +1,9 @@
 <script>
   import { onMount } from 'svelte'
   const date = new Date()
-  const dateString = `${date.getMonth()}-${
-    date.getDate() + 1
-  }-${date.getFullYear()}`
+  const dateString = `${
+    date.getMonth() + 1
+  }-${date.getDate()}-${date.getFullYear()}`
 
   // these automatically update when `time`
   // changes, because of the `$:` prefix

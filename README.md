@@ -46,11 +46,12 @@ Add this to the `dashboard` array:
 
 ## Adding Background Images
 
-To add as many background images as you would like, build out the images array as exampled below.
+To add as many background images as you would like, build out the images array as exampled below. Also your image loop is either `ordered` | `random`
 
 ```json
 {
-  "images": ["image-1.png", "image-2.png", "image-3.png"]
+  "images": ["image-1.png", "image-2.png", "image-3.png"],
+  "imageRotation": "ordered"
 }
 ```
 

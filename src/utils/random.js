@@ -6,6 +6,7 @@ const {
   eveningText,
   nightText,
   images,
+  imageRotation,
 } = customJson
 
 const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)]
@@ -28,8 +29,14 @@ const greeting = () => {
   return { time: 'good night', text: getRandom(nightText) }
 }
 
+let imageCount = -1
 const imageName = () => {
   if (!images.length) return null
+  if (imageRotation === 'ordered') {
+    imageCount += 1
+    if (imageCount >= images.length) imageCount = 0
+    return images[imageCount]
+  }
   return getRandom(images)
 }
 

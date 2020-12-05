@@ -18,7 +18,7 @@
     left: 0;
     position: absolute;
     z-index: 0;
-    transition: background-image 2s;
+    /* transition: background 2s; */
     background-position: center center;
     animation: pulse 30s infinite;
   }
