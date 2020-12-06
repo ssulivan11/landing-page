@@ -9,9 +9,8 @@
   import Weather from './components/Weather.svelte'
 
   let isHiddenContainer = false
-
-  export let greeting = {},
-    allLinks = []
+  export let greeting = {}
+  export let allLinks = []
 </script>
 
 <style>
