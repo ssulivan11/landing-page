@@ -2,7 +2,7 @@
 
 exports[`should render Currency with mock fetch 1`] = `
 <a
-  class="currency"
+  class="currency svelte-o1cyf9"
   href="https://www.xe.com/currencyconverter/convert/?Amount=1&From=GBP&To=USD"
 >
   GBP
