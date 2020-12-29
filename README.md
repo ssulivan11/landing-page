@@ -1,4 +1,4 @@
-# Landing Page
+# 🏠 Landing Page
 
 ## Get Started
 
