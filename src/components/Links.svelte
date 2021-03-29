@@ -7,12 +7,12 @@
     margin: 5px 15px;
   }
   h2 {
-    display: none;
+    /* display: none; */
     font-size: 1em;
     font-weight: 200;
     margin-bottom: -10px;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
   }
   a {
     font-weight: 200;

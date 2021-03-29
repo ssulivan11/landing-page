@@ -2,12 +2,12 @@ module.exports = {
   files: [
     {
       path: 'public/build/bundle.js',
-      maxSize: '15.2kB',
+      maxSize: '20kB',
       compression: 'gzip',
     },
     {
       path: 'public/build/bundle.css',
-      maxSize: '1.6kB',
+      maxSize: '2kB',
       compression: 'gzip',
     },
   ],

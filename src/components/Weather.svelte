@@ -3,13 +3,17 @@
   import Popover from 'svelte-popover'
   import * as customJson from '../../custom.json'
 
+  const { zipCode } = customJson
+
   let weatherData
   let weatherIcon
+  let weatherPopover = customJson.weatherPopover
+  let googleUrl = `https://www.google.com/search?q=${zipCode}+weather`
 
   if (customJson.zipCode) {
     onMount(async () => {
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${customJson.zipCode}&units=imperial&appid=c75e4a20e1b09cb5e3221c35295c5569`
+        `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&units=imperial&appid=c75e4a20e1b09cb5e3221c35295c5569`
       )
       weatherData = await res.json()
       switch (weatherData.weather[0].main) {
@@ -55,7 +59,7 @@
   }
 </style>
 
-{#if weatherData}
+{#if weatherData && weatherPopover}
   <div class="weather-container">
     <Popover action="hover" arrow="false">
       <i class="material-icons" slot="target">{weatherIcon}</i>
@@ -70,4 +74,10 @@
       </div>
     </Popover>
   </div>
+{/if}
+
+{#if !weatherPopover}
+  <a class="weather-container" target="_self" href={googleUrl}>
+    <i class="material-icons">{weatherIcon}</i>
+  </a>
 {/if}
